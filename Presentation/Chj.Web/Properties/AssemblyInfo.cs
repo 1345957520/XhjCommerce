@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Chj.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Nop Solutions, Ltd")]
+[assembly: AssemblyCompany("Chj Solutions, Ltd")]
 [assembly: AssemblyProduct("Chj.Web")]
-[assembly: AssemblyCopyright("Copyright © Nop Solutions, Ltd 2010")]
+[assembly: AssemblyCopyright("Copyright © Chj Solutions, Ltd 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

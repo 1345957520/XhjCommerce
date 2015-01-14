@@ -917,7 +917,7 @@ GO
 
 
 SET IDENTITY_INSERT [dbo].[Address] ON
-INSERT [dbo].[Address] ([Id], [FirstName], [LastName], [Email], [Company], [CountryId], [StateProvinceId], [City], [Address1], [Address2], [ZipPostalCode], [PhoneNumber], [FaxNumber], [CustomAttributes], [CreatedOnUtc]) VALUES (1, N'John', N'Smith', N'admin@yourStore.com', N'Nop Solutions', 1, 40, N'New York', N'21 West 52nd Street', N'', N'10021', N'12345678', N'', NULL, CAST(0x0000A3F800E4FB1B AS DateTime))
+INSERT [dbo].[Address] ([Id], [FirstName], [LastName], [Email], [Company], [CountryId], [StateProvinceId], [City], [Address1], [Address2], [ZipPostalCode], [PhoneNumber], [FaxNumber], [CustomAttributes], [CreatedOnUtc]) VALUES (1, N'John', N'Smith', N'admin@yourStore.com', N'Chj Solutions', 1, 40, N'New York', N'21 West 52nd Street', N'', N'10021', N'12345678', N'', NULL, CAST(0x0000A3F800E4FB1B AS DateTime))
 SET IDENTITY_INSERT [dbo].[Address] OFF
 GO
 

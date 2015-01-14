@@ -1,5 +1,5 @@
 ﻿@model CustomerReturnRequestsModel
-@using Nop.Web.Models.Customer;
+@using Chj.Web.Models.Customer;
 @{
     Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
 
@@ -42,7 +42,7 @@
                                 @T("Account.CustomerReturnRequests.Comments")
                             </li>
                             <li class="comments">
-                                @Html.Raw(Nop.Core.Html.HtmlHelper.FormatText(item.Comments, false, true, false, false, false, false))
+                                @Html.Raw(Chj.Core.Html.HtmlHelper.FormatText(item.Comments, false, true, false, false, false, false))
                             </li>
                         }
                     </ul>

@@ -1,10 +1,10 @@
 ﻿@model IList<ProductDetailsModel.ProductAttributeModel>
-@using Nop.Web.Models.Catalog;
-@using Nop.Core.Domain.Catalog;
-@using Nop.Core.Infrastructure;
+@using Chj.Web.Models.Catalog;
+@using Chj.Core.Domain.Catalog;
+@using Chj.Core.Infrastructure;
 @using System.Text;
 @using System.Globalization;
-@using Nop.Services.Security;
+@using Chj.Services.Security;
 @{
     //dynamic price update support
     var hidePrices = !EngineContext.Current.Resolve<IPermissionService>().Authorize(StandardPermissionProvider.DisplayPrices);

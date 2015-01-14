@@ -1,13 +1,13 @@
 ﻿@model OnePageCheckoutModel
-@using Nop.Web.Models.Checkout;
-@using Nop.Core.Infrastructure;
+@using Chj.Web.Models.Checkout;
+@using Chj.Core.Infrastructure;
 @{
     Layout = "~/Views/Shared/_ColumnsOne.cshtml";
 
     Html.AddScriptParts("~/Scripts/public.accordion.js");
     Html.AddScriptParts("~/Scripts/public.onepagecheckout.js");
 
-    var storeLocation = EngineContext.Current.Resolve<Nop.Core.IWebHelper>().GetStoreLocation();
+    var storeLocation = EngineContext.Current.Resolve<Chj.Core.IWebHelper>().GetStoreLocation();
 
     //title
     Html.AddTitleParts(T("PageTitle.Checkout").Text);

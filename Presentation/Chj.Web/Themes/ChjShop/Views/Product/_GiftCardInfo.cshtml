@@ -1,5 +1,5 @@
 ﻿@model ProductDetailsModel.GiftCardModel
-@using Nop.Web.Models.Catalog;
+@using Chj.Web.Models.Catalog;
 @if (Model.IsGiftCard)
 {
     
@@ -12,7 +12,7 @@
                 @Html.TextBoxFor(model => model.RecipientName, new { @class = "recipient-name " })
             </div>
         </div>
-        @if (Model.GiftCardType == Nop.Core.Domain.Catalog.GiftCardType.Virtual)
+        @if (Model.GiftCardType == Chj.Core.Domain.Catalog.GiftCardType.Virtual)
         {
             <div class="form-group row">
                 <div class="col-md-4">
@@ -31,7 +31,7 @@
                     @Html.TextBoxFor(model => model.SenderName, new { @class = "sender-name " })
                 </div>
             </div>
-        @if (Model.GiftCardType == Nop.Core.Domain.Catalog.GiftCardType.Virtual)
+        @if (Model.GiftCardType == Chj.Core.Domain.Catalog.GiftCardType.Virtual)
         {
             <div class="form-group row">
                 <div class="col-md-4">

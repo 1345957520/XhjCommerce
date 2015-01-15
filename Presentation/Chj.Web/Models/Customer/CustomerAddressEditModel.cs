@@ -10,5 +10,6 @@ namespace Chj.Web.Models.Customer
             this.Address = new AddressModel();
         }
         public AddressModel Address { get; set; }
+        public CustomerNavigationModel NavigationModel { get; set; }
     }
 }

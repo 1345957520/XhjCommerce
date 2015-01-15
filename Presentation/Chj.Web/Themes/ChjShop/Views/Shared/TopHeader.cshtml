@@ -5,9 +5,14 @@
             <div class="col-sm-6">
                 <div class="contactinfo">
                     <ul class="nav nav-pills">
-                        <li><a href="#"><i class="fa fa-phone"></i>13880535849</a></li>
-                        <li><a href="#"><i class="fa fa-code"></i> 收藏餐具购</a></li>
-                        <li><a href="#"><i class="fa fa-foursquare"></i> 关注餐具购</a></li>
+                        <li class="first-child"><a href="#"><i class="fa fa-phone"></i>13880535849</a></li>
+                        <li><a id="artopheadcollect" href="javascript:void(0);"><img src="/Themes/ChjShop/Content/css/images/collect.png" /> 收藏餐具购</a></li>
+                        <li class="dropdown">
+                            <a id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/Themes/ChjShop/Content/css/images/QRcode.png" /> 关注餐具购</a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                <li role="presentation"><img width="180px" height="180px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" /></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -15,16 +20,39 @@
                 <div class="contactinfo">
                     <ul class="nav nav-pills  pull-right">
                         <li><a href="/customer/info">我的餐具购</a></li>
-                        <li><a href="#"> 手机版</a></li>
-                        @*<li><a href="#"> 客服服务</a></li>*@
+                        <li class="dropdown">
+                            <a href="#" id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown"> 手机版</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                    <li role="presentation">
+                                        <div style="width:200px;height:100px;">
+                                            <div>
+                                                
+                                            </div>
+                                            <div>
+                                                <img class="pull-left" width="80px" height="80px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" />
+                                                <div>
+                                                    <a style="margin-bottom:10px;" href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/applestore.png" /></a>
+                                                    <a href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/android.png" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            
+                        </li>
                         <li>
-                            <select>
-                                <option>客服服务</option>
-                                <option>帮助中心</option>
-                                <option>售后服务</option>
-                                <option>在线客服</option>
-                                <option>客服邮箱</option>
-                            </select>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    客服服务
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">帮助中心</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">售后服务</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">在线客服</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">客服邮箱</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li><a href="#"> 分享有礼</a></li>
                     </ul>
@@ -39,15 +67,6 @@
                         <li><a href="https://plus.google.com/+nopcommerce" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                     </ul>*@
                 </div>
-                @*<div class="social-icons pull-right">
-                    <select>
-                        <option>帮助中心</option>
-                        <option>售后服务</option>
-                        <option>在线客服</option>
-                        <option>投诉中心</option>
-                        <option>客服邮箱</option>
-                    </select>
-                </div>*@
             </div>
         </div>
     </div>
@@ -91,50 +110,63 @@
 
 
 <script type="text/javascript">
-	$(function()
-		{
-			// Call stylesheet init so that all stylesheet changing functions 
-			// will work.
-			$.stylesheetInit();
-			
-			// This code loops through the stylesheets when you click the link with 
-			// an ID of "toggler" below.
-			$('#toggler').bind(
-				'click',
-				function(e)
-				{
-					$.stylesheetToggle();
-					return false;
-				}
-			);
-			
-			// When one of the styleswitch links is clicked then switch the stylesheet to
-			// the one matching the value of that links rel attribute.
-			$('.styleswitch').bind(
-				'click',
-				function(e)
-				{
-					$.stylesheetSwitch(this.getAttribute('rel'));
-					return false;
-				}
-			);
+    $(function () {
+        // Call stylesheet init so that all stylesheet changing functions 
+        // will work.
+        $.stylesheetInit();
+
+        // This code loops through the stylesheets when you click the link with 
+        // an ID of "toggler" below.
+        $('#toggler').bind(
+            'click',
+            function (e) {
+                $.stylesheetToggle();
+                return false;
+            }
+        );
+
+        // When one of the styleswitch links is clicked then switch the stylesheet to
+        // the one matching the value of that links rel attribute.
+        $('.styleswitch').bind(
+            'click',
+            function (e) {
+                $.stylesheetSwitch(this.getAttribute('rel'));
+                return false;
+            }
+        );
 
 
-			$("#configure-button").on("click", function (e) {
-			    e.preventDefault();
-	        if ($(this).data("expanded") == "true") {
-	            $("#color-options").css({ right: '-200px' });
-	            $("#configure-button").css({ right: '0px' });
-	            $(this).data("expanded","false");
-	        } else {
-	            $("#color-options").css({ right: '0px' });
-	            $("#configure-button").css({ right: '200px' });
-	            $(this).data("expanded", "true");
-	        }
-	        
-	    });
+        $("#configure-button").on("click", function (e) {
+            e.preventDefault();
+            if ($(this).data("expanded") == "true") {
+                $("#color-options").css({ right: '-200px' });
+                $("#configure-button").css({ right: '0px' });
+                $(this).data("expanded", "false");
+            } else {
+                $("#color-options").css({ right: '0px' });
+                $("#configure-button").css({ right: '200px' });
+                $(this).data("expanded", "true");
+            }
 
+        });
 
-		}
+        $("#artopheadcollect").click(function () {
+
+                if (document.all) {
+                    try {
+                        window.external.addFavorite(window.location.href, document.title);
+                    } catch (e) {
+                        alert("加入收藏失败，请使用Ctrl+D进行添加");
+                    }
+
+                } else if (window.sidebar) {
+                    window.sidebar.addPanel(document.title, window.location.href, "");
+                } else {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            
+        });
+
+    }
 	);
 	</script>

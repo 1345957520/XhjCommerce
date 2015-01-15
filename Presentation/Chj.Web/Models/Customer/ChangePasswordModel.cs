@@ -27,5 +27,6 @@ namespace Chj.Web.Models.Customer
 
         public string Result { get; set; }
 
+        public CustomerNavigationModel NavigationModel { get; set; }
     }
 }

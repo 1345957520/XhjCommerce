@@ -8,6 +8,8 @@ namespace Chj.Web.Models.Catalog
 
         public string SpecificationAttributeName { get; set; }
 
+        public string SpecificationAttributeOption { get; set; }
+
         //this value is already HTML encoded
         public string ValueRaw { get; set; }
     }

@@ -1541,8 +1541,11 @@
     <Content Include="Themes\ChjShop\Content\css\images\404\404.png" />
     <Content Include="Themes\ChjShop\Content\css\images\ajax_loader_large.gif" />
     <Content Include="Themes\ChjShop\Content\css\images\ajax_loader_small.gif" />
+    <Content Include="Themes\ChjShop\Content\css\images\android.png" />
+    <Content Include="Themes\ChjShop\Content\css\images\applestore.png" />
     <Content Include="Themes\ChjShop\Content\css\images\arrow-up.png" />
     <Content Include="Themes\ChjShop\Content\css\images\bbeditor-button-bg.gif" />
+    <Content Include="Themes\ChjShop\Content\css\images\bigqrcode.png" />
     <Content Include="Themes\ChjShop\Content\css\images\blog\blog-one.jpg" />
     <Content Include="Themes\ChjShop\Content\css\images\blog\blog-three.jpg" />
     <Content Include="Themes\ChjShop\Content\css\images\blog\blog-two.jpg" />
@@ -1559,6 +1562,7 @@
     <Content Include="Themes\ChjShop\Content\css\images\cart\three.png" />
     <Content Include="Themes\ChjShop\Content\css\images\cart\two.png" />
     <Content Include="Themes\ChjShop\Content\css\images\closelabel.gif" />
+    <Content Include="Themes\ChjShop\Content\css\images\collect.png" />
     <Content Include="Themes\ChjShop\Content\css\images\cyan-picker.png" />
     <Content Include="Themes\ChjShop\Content\css\images\cyan_logo.png" />
     <Content Include="Themes\ChjShop\Content\css\images\darkblue-picker.png" />
@@ -1631,6 +1635,7 @@
     <Content Include="Themes\ChjShop\Content\css\images\product-details\similar3.jpg" />
     <Content Include="Themes\ChjShop\Content\css\images\progress-step-active.gif" />
     <Content Include="Themes\ChjShop\Content\css\images\progress-step-inactive.gif" />
+    <Content Include="Themes\ChjShop\Content\css\images\QRcode.png" />
     <Content Include="Themes\ChjShop\Content\css\images\red-picker.png" />
     <Content Include="Themes\ChjShop\Content\css\images\red_logo.png" />
     <Content Include="Themes\ChjShop\Content\css\images\right.png" />
@@ -1646,6 +1651,7 @@
     <Content Include="Themes\ChjShop\Content\css\images\star-x-active_old.png" />
     <Content Include="Themes\ChjShop\Content\css\images\star-x-inactive.png" />
     <Content Include="Themes\ChjShop\Content\css\images\styles.rtl.css" />
+    <Content Include="Themes\ChjShop\Content\css\images\twm.png" />
     <Content Include="Themes\ChjShop\Content\css\main.css" />
     <Content Include="Themes\ChjShop\Content\css\prettyPhoto.css" />
     <Content Include="Themes\ChjShop\Content\css\price-range.css" />

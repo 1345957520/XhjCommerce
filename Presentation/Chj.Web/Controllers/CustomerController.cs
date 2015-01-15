@@ -1331,6 +1331,8 @@ namespace Chj.Web.Controllers
             var customer = _workContext.CurrentCustomer;
 
             var model = new CustomerAddressListModel();
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Addresses;
             var addresses = customer.Addresses
                 //enabled for the current store
                 .Where(a => a.Country == null || _storeMappingService.Authorize(a.Country))
@@ -1377,17 +1379,19 @@ namespace Chj.Web.Controllers
         {
             if (!_workContext.CurrentCustomer.IsRegistered())
                 return new HttpUnauthorizedResult();
-
+            var customer = _workContext.CurrentCustomer;
             var model = new CustomerAddressEditModel();
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Addresses;
             model.Address.PrepareModel(
-                address: null,
-                excludeProperties: false,
-                addressSettings:_addressSettings,
-                localizationService:_localizationService,
-                stateProvinceService: _stateProvinceService,
-                addressAttributeService: _addressAttributeService,
-                addressAttributeParser: _addressAttributeParser,
-                loadCountries: () => _countryService.GetAllCountries());
+                            address: null,
+                            excludeProperties: false,
+                            addressSettings: _addressSettings,
+                            localizationService: _localizationService,
+                            stateProvinceService: _stateProvinceService,
+                            addressAttributeService: _addressAttributeService,
+                            addressAttributeParser: _addressAttributeParser,
+                            loadCountries: () => _countryService.GetAllCountries());
 
             return View(model);
         }
@@ -1426,6 +1430,8 @@ namespace Chj.Web.Controllers
             }
 
             //If we got this far, something failed, redisplay form
+			  model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Addresses;
             model.Address.PrepareModel(
                 address: null,
                 excludeProperties: true,
@@ -1453,6 +1459,9 @@ namespace Chj.Web.Controllers
                 return RedirectToRoute("CustomerAddresses");
 
             var model = new CustomerAddressEditModel();
+
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Addresses;
             model.Address.PrepareModel(address: address,
                 excludeProperties: false,
                 addressSettings: _addressSettings,
@@ -1497,6 +1506,8 @@ namespace Chj.Web.Controllers
             }
 
             //If we got this far, something failed, redisplay form
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Addresses;
             model.Address.PrepareModel(
                 address: address,
                 excludeProperties: true,
@@ -1522,6 +1533,8 @@ namespace Chj.Web.Controllers
             var customer = _workContext.CurrentCustomer;
 
             var model = new CustomerDownloadableProductsModel();
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.DownloadableProducts;
             var items = _orderService.GetAllOrderItems(null, customer.Id, null, null,
                 null, null, null, true);
             foreach (var item in items)
@@ -1575,7 +1588,11 @@ namespace Chj.Web.Controllers
             if (!_workContext.CurrentCustomer.IsRegistered())
                 return new HttpUnauthorizedResult();
 
+            var customer = _workContext.CurrentCustomer;
+
             var model = new ChangePasswordModel();
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.ChangePassword;
             return View(model);
         }
 
@@ -1587,7 +1604,8 @@ namespace Chj.Web.Controllers
                 return new HttpUnauthorizedResult();
 
             var customer = _workContext.CurrentCustomer;
-
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.ChangePassword;
             if (ModelState.IsValid)
             {
                 var changePasswordRequest = new ChangePasswordRequest(customer.Email,
@@ -1625,6 +1643,8 @@ namespace Chj.Web.Controllers
             var customer = _workContext.CurrentCustomer;
 
             var model = new CustomerAvatarModel();
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Avatar;
             model.AvatarUrl = _pictureService.GetPictureUrl(
                 customer.GetAttribute<int>(SystemCustomerAttributeNames.AvatarPictureId),
                 _mediaSettings.AvatarPictureSize,
@@ -1643,7 +1663,11 @@ namespace Chj.Web.Controllers
                 return RedirectToRoute("CustomerInfo");
 
             var customer = _workContext.CurrentCustomer;
-            
+
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Avatar;
+
+
             if (ModelState.IsValid)
             {
                 try
@@ -1700,6 +1724,9 @@ namespace Chj.Web.Controllers
                 return RedirectToRoute("CustomerInfo");
 
             var customer = _workContext.CurrentCustomer;
+
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Avatar;
 
             var customerAvatar = _pictureService.GetPictureById(customer.GetAttribute<int>(SystemCustomerAttributeNames.AvatarPictureId));
             if (customerAvatar != null)

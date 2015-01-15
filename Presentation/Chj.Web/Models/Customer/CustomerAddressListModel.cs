@@ -12,5 +12,6 @@ namespace Chj.Web.Models.Customer
         }
 
         public IList<AddressModel> Addresses { get; set; }
+        public CustomerNavigationModel NavigationModel { get; set; }
     }
 }

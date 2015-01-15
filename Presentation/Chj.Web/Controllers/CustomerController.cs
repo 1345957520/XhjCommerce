@@ -166,7 +166,19 @@ namespace Chj.Web.Controllers
         #endregion
 
         #region Utilities
-        
+        [NonAction]
+        protected virtual CustomerNavigationModel GetCustomerNavigationModel(Customer customer)
+        {
+            var model = new CustomerNavigationModel();
+            model.HideAvatar = !_customerSettings.AllowCustomersToUploadAvatars;
+            model.HideRewardPoints = !_rewardPointsSettings.Enabled;
+            model.HideForumSubscriptions = !_forumSettings.ForumsEnabled || !_forumSettings.AllowCustomersToManageSubscriptions;
+            model.HideReturnRequests = !_orderSettings.ReturnRequestsEnabled ||
+                _orderService.SearchReturnRequests(_storeContext.CurrentStore.Id, customer.Id, 0, null, 0, 1).Count == 0;
+            model.HideDownloadableProducts = _customerSettings.HideDownloadableProductsTab;
+            model.HideBackInStockSubscriptions = _customerSettings.HideBackInStockSubscriptionsTab;
+            return model;
+        }
         [NonAction]
         protected virtual void TryAssociateAccountWithExternalAccount(Customer customer)
         {
@@ -412,6 +424,9 @@ namespace Chj.Web.Controllers
             //custom customer attributes
             var customAttributes = PrepareCustomCustomerAttributes(customer);
             customAttributes.ForEach(model.CustomerAttributes.Add);
+
+            model.NavigationModel = GetCustomerNavigationModel(customer);
+            model.NavigationModel.SelectedTab = CustomerNavigationEnum.Info;
         }
 
         [NonAction]

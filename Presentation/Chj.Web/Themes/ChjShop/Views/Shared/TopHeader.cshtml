@@ -1,0 +1,172 @@
+﻿
+<div class="header_top"><!--header_top-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="contactinfo">
+                    <ul class="nav nav-pills">
+                        <li class="first-child"><a href="#"><i class="fa fa-phone"></i>13880535849</a></li>
+                        <li><a id="artopheadcollect" href="javascript:void(0);"><img src="/Themes/ChjShop/Content/css/images/collect.png" /> 收藏餐具购</a></li>
+                        <li class="dropdown">
+                            <a id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/Themes/ChjShop/Content/css/images/QRcode.png" /> 关注餐具购</a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                <li role="presentation"><img width="180px" height="180px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" /></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="contactinfo">
+                    <ul class="nav nav-pills  pull-right">
+                        <li><a href="/customer/info">我的餐具购</a></li>
+                        <li class="dropdown">
+                            <a href="#" id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown"> 手机版</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                    <li role="presentation">
+                                        <div style="width:200px;height:100px;">
+                                            <div>
+                                                
+                                            </div>
+                                            <div>
+                                                <img class="pull-left" width="80px" height="80px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" />
+                                                <div>
+                                                    <a style="margin-bottom:10px;" href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/applestore.png" /></a>
+                                                    <a href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/android.png" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    客服服务
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">帮助中心</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">售后服务</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">在线客服</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">客服邮箱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#"> 分享有礼</a></li>
+                    </ul>
+                </div>
+                <div class="social-icons pull-right">
+                    @*<span>分享有礼</span>*@
+                    @*<ul class="nav navbar-nav">
+                        <li><a href="http://www.facebook.com/nopCommerce" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/nopCommerce" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="http://www.linkedin.com/groups/nopCommerce-3305256" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://dribbble.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="https://plus.google.com/+nopcommerce" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="theme-color-picker">
+    <div id="configure-button" class="configure-button" data-expanded="false">
+        <a href="#"><i class="fa fa-cog fa-2x"></i></a>
+        
+    </div>
+    <div class="color-options" id="color-options">
+        <h3>Preset Color</h3>
+        <div class="options-choosing-palette">
+            <ul>
+                <li><a href="#" rel="blue" class="styleswitch blue-picker"><img src="~/Themes/ChjShop/Content/css/images/blue-picker.png"/></a></li>
+                <li><a href="#" rel="red" class="styleswitch red-picker"><img src="~/Themes/ChjShop/Content/css/images/red-picker.png"/></a></li>
+                <li><a href="#" rel="darkblue" class="styleswitch darkblue-picker"><img src="~/Themes/ChjShop/Content/css/images/darkblue-picker.png"/></a></li>
+            
+            
+
+
+            </ul>
+            <ul>
+                
+                <li><a href="#" rel="orange" class="styleswitch orange-picker"><img src="~/Themes/ChjShop/Content/css/images/orange-picker.png"/></a></li>
+                <li><a href="#" rel="cyan" class="styleswitch cyan-picker"><img src="~/Themes/ChjShop/Content/css/images/cyan-picker.png"/></a></li>
+                <li><a href="#" rel="green" class="styleswitch green-picker"><img src="~/Themes/ChjShop/Content/css/images/green-picker.png"/></a></li>
+
+            </ul>
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        // Call stylesheet init so that all stylesheet changing functions 
+        // will work.
+        $.stylesheetInit();
+
+        // This code loops through the stylesheets when you click the link with 
+        // an ID of "toggler" below.
+        $('#toggler').bind(
+            'click',
+            function (e) {
+                $.stylesheetToggle();
+                return false;
+            }
+        );
+
+        // When one of the styleswitch links is clicked then switch the stylesheet to
+        // the one matching the value of that links rel attribute.
+        $('.styleswitch').bind(
+            'click',
+            function (e) {
+                $.stylesheetSwitch(this.getAttribute('rel'));
+                return false;
+            }
+        );
+
+
+        $("#configure-button").on("click", function (e) {
+            e.preventDefault();
+            if ($(this).data("expanded") == "true") {
+                $("#color-options").css({ right: '-200px' });
+                $("#configure-button").css({ right: '0px' });
+                $(this).data("expanded", "false");
+            } else {
+                $("#color-options").css({ right: '0px' });
+                $("#configure-button").css({ right: '200px' });
+                $(this).data("expanded", "true");
+            }
+
+        });
+
+        $("#artopheadcollect").click(function () {
+
+                if (document.all) {
+                    try {
+                        window.external.addFavorite(window.location.href, document.title);
+                    } catch (e) {
+                        alert("加入收藏失败，请使用Ctrl+D进行添加");
+                    }
+
+                } else if (window.sidebar) {
+                    window.sidebar.addPanel(document.title, window.location.href, "");
+                } else {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            
+        });
+
+    }
+	);
+	</script>

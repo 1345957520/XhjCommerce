@@ -4,9 +4,10 @@
 @if (Model.Count > 0)
 {
     var cat_i = 0;
+    
     <div class="recommended_items"><!--recommended_items-->
+        
         <h2 class="title text-center">Featured Categories</h2>
-						
         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 @foreach (var item in Model)
@@ -29,7 +30,7 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl"
+                                    <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.FullSizeImageUrl"
                                          title="@item.PictureModel.Title" />
                                     
                                     <p><a href="@Url.RouteUrl("Category", new { SeName = item.SeName })" title="@item.PictureModel.Title">

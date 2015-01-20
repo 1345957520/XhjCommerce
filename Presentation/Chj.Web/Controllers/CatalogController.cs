@@ -748,6 +748,76 @@ namespace Chj.Web.Controllers
 
         #endregion
 
+        #region MyRegion
+        [ChildActionOnly]
+        public ActionResult HomepageCategoriesList()
+        {
+
+
+            var customerRolesIds = _workContext.CurrentCustomer.CustomerRoles
+                .Where(cr => cr.Active).Select(cr => cr.Id).ToList();
+
+            string categoriesCacheKey = string.Format(ModelCacheEventConsumer.CATEGORY_HOMEPAGE_KEY,
+                string.Join(",", customerRolesIds),
+                _storeContext.CurrentStore.Id,
+                _workContext.WorkingLanguage.Id,
+                _webHelper.IsCurrentConnectionSecured());
+
+            var model = _cacheManager.Get(categoriesCacheKey, () =>
+                _categoryService.GetAllCategoriesByParentCategoryId(0)
+                .Select(x =>
+                {
+                    var catModel = x.ToModel();
+
+                    //prepare picture model
+                    int pictureSize = _mediaSettings.CategoryThumbPictureSize;
+                    var categoryPictureCacheKey = string.Format(ModelCacheEventConsumer.CATEGORY_PICTURE_MODEL_KEY, x.Id, pictureSize, true, _workContext.WorkingLanguage.Id, _webHelper.IsCurrentConnectionSecured(), _storeContext.CurrentStore.Id);
+                    catModel.PictureModel = _cacheManager.Get(categoryPictureCacheKey, () =>
+                    {
+                        var picture = _pictureService.GetPictureById(x.PictureId);
+                        var pictureModel = new PictureModel
+                        {
+                            FullSizeImageUrl = _pictureService.GetPictureUrl(picture),
+                            ImageUrl = _pictureService.GetPictureUrl(picture, pictureSize),
+                            Title = string.Format(_localizationService.GetResource("Media.Category.ImageLinkTitleFormat"), catModel.Name),
+                            AlternateText = string.Format(_localizationService.GetResource("Media.Category.ImageAlternateTextFormat"), catModel.Name)
+                        };
+                        return pictureModel;
+                    });
+
+                    catModel.SubCategories = _categoryService.GetAllCategoriesByParentCategoryId(catModel.Id).Select(z => {
+                        var zmodel = new CategoryModel.SubCategoryModel();
+                        zmodel.Id = z.Id;
+                        zmodel.Name = z.Name;
+                        zmodel.PictureModel = _cacheManager.Get(categoryPictureCacheKey, () =>
+                        {
+                            var picture = _pictureService.GetPictureById(z.PictureId);
+                            var pictureModel = new PictureModel
+                            {
+                                FullSizeImageUrl = _pictureService.GetPictureUrl(picture),
+                                ImageUrl = _pictureService.GetPictureUrl(picture, pictureSize),
+                                Title = string.Format(_localizationService.GetResource("Media.Category.ImageLinkTitleFormat"), catModel.Name),
+                                AlternateText = string.Format(_localizationService.GetResource("Media.Category.ImageAlternateTextFormat"), catModel.Name)
+                            };
+                            return pictureModel;
+                        });
+                        zmodel.SeName = z.GetSeName();
+                        
+                        return zmodel;
+                    }).ToList();
+
+                    return catModel;
+                })
+                .ToList()
+            );
+
+            if (model.Count == 0)
+                return Content("");
+
+            return PartialView(model);
+        }
+        #endregion
+
         #region Manufacturers
 
         [NopHttpsRequirement(SslRequirement.No)]

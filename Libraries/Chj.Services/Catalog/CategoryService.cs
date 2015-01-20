@@ -301,6 +301,39 @@ namespace Chj.Services.Catalog
 
             return categories;
         }
+
+        /// <summary>
+        /// Gets all categories displayed on the home page
+        /// </summary>
+        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <returns>Categories</returns>
+        public virtual IList<Category> GetAllCategoriesDisplayedOnHomePageList(bool showHidden = false)
+        {
+            //var query = from c in _categoryRepository.Table
+            //            orderby c.DisplayOrder
+            //            where c.Published &&
+            //            !c.Deleted &&
+            //            c.ShowOnHomePage
+            //            select c;
+
+            //var categories = query.ToList();
+            //if (!showHidden)
+            //{
+            //    categories = categories
+            //        .Where(c => _aclService.Authorize(c) && _storeMappingService.Authorize(c))
+            //        .ToList();
+            //}
+            var categories = GetAllCategoriesByParentCategoryId(0, showHidden).Select(x => {
+                var catModel = x;
+
+                
+
+                return catModel;
+            }).ToList();
+
+
+            return categories;
+        }
                 
         /// <summary>
         /// Gets a category

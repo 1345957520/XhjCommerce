@@ -108,7 +108,7 @@
 <div class="container">
     <div class="row">
         
-        <div class="col-lg-3 col-md-4 col-sm-4 hidden-xs">
+        @*<div class="col-lg-3 col-md-4 col-sm-4 hidden-xs">
             <div class="left-sidebar">
                 @if (IsSectionDefined("left"))
                 {
@@ -126,8 +126,8 @@
                 }
             </div>
 
-        </div>
-        <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 padding-right">
+        </div>*@
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             @Html.Widget("main_column_before")
             @RenderBody()
             @Html.Widget("main_column_after")

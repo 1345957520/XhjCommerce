@@ -25,6 +25,12 @@ namespace Chj.Web.Infrastructure
                             new { controller = "Widget", action = "WidgetsByZone" },
                             new[] { "Chj.Web.Controllers" });
 
+            routes.MapRoute(
+               name: "ProductsHomePage",
+               url: "{controller}/{action}/{rootCatalogId}/{productThumbPictureSize}",
+               defaults: new { controller = "Product", action = "HomepageProductsCatalog" }
+           );  
+
             //login
             routes.MapLocalizedRoute("Login",
                             "login/",

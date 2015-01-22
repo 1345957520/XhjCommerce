@@ -2298,6 +2298,8 @@
     <Content Include="Themes\ChjShop\Views\Topic\TopicDetails.cshtml" />
     <Content Include="Themes\ChjShop\Views\Web.config" />
     <Content Include="Themes\ChjShop\Views\Catalog\HomepageCategoriesList.cshtml" />
+    <Content Include="Views\Catalog\HomepageCategoriesListRight.cshtml" />
+    <Content Include="Views\Product\HomepageProductsCatalog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

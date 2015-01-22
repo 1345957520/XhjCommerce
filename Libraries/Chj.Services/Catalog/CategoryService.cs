@@ -550,6 +550,14 @@ namespace Chj.Services.Catalog
             });
         }
 
+        public virtual IList<ProductCategory> GetProductCategoriesByParentCategoriesId(int parentCategoriesId, int storeId, bool showHidden = false){
+            if (parentCategoriesId == 0)
+                return new List<ProductCategory>();
+
+            var categories = GetAllCategoriesByParentCategoryId(parentCategoriesId, showHidden);
+
+        }
+
         /// <summary>
         /// Gets a product category mapping 
         /// </summary>

@@ -1161,6 +1161,22 @@ namespace Chj.Web.Controllers
             return PartialView(model);
         }
 
+        [ChildActionOnly]
+        public ActionResult HomepageProductsCatalog(int rootCatalogId, int? productThumbPictureSize)
+        {
+            var products = _productService.GetAllProductsDisplayedOnHomePage();
+            //ACL and store mapping
+            products = products.Where(p => _aclService.Authorize(p) && _storeMappingService.Authorize(p)).ToList();
+            //availability dates
+            products = products.Where(p => p.IsAvailable()).ToList();
+
+            if (products.Count == 0)
+                return Content("");
+
+            var model = PrepareProductOverviewModels(products, true, true, productThumbPictureSize).ToList();
+            return PartialView(model);
+        }
+
         #endregion
 
         #region Product reviews

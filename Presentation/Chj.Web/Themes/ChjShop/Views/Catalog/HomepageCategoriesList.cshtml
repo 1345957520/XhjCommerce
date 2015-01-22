@@ -31,44 +31,13 @@
                                     @Html.Raw("</li>")
                                 }
                             }
-
-                                @*@foreach (var item in itemOne.SubCategories)
-                    {
-                        cc++;
-                        if (cc % 2 != 0)
-                        {
-
-                        }
-
-                        <li>
-                            <span><a href="@Url.RouteUrl("Category", new { SeName = item.SeName })">@item.Name</a></span>
-                        </li>
-                    }*@
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-10" style="background-color:red">
+                <div class="col-md-10">
                     <div style="border:1px solid #e5e5e5">
-                        <div class="col-lg-4">
-                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
-
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
-
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
-
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
-
-                        </div>
+                        @Html.Action("HomepageProductsCatalog", "Product", new { rootCatalogId = itemOne.Id })
                     </div>
                 </div>
             </div>

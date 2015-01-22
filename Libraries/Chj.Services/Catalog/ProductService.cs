@@ -233,6 +233,31 @@ namespace Chj.Services.Catalog
         }
 
         /// <summary>
+        /// Get products by identifiers
+        /// </summary>
+        /// <param name="productIds">Product identifiers</param>
+        /// <returns>Products</returns>
+        public virtual IList<Product> GetProductsByCategoryIds(int[] categoryIds)
+        {
+            if (categoryIds == null || categoryIds.Length == 0)
+                return new List<Product>();
+
+            var query = from p in _productRepository.Table
+                        where productIds.Contains(p.Id)
+                        select p;
+            var products = query.ToList();
+            //sort by passed identifiers
+            var sortedProducts = new List<Product>();
+            foreach (int id in productIds)
+            {
+                var product = products.Find(x => x.Id == id);
+                if (product != null)
+                    sortedProducts.Add(product);
+            }
+            return sortedProducts;
+        }
+
+        /// <summary>
         /// Inserts a product
         /// </summary>
         /// <param name="product">Product</param>

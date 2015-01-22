@@ -1,73 +1,81 @@
 ﻿@model IList<CategoryModel>
 
 @using Chj.Web.Models.Catalog;
-@if (Model.Count > 0)
-{
-    var cat_i = 0;
-    foreach (var itemOne in Model)
+@{
+    if (Model.Count > 0)
     {
-        <div class="row" style="margin-bottom:20px;">
-          <div class="col-md-2" style="background-color:yellow">
-              <div style="background-color:blue">
-                  <span><a href="@Url.RouteUrl("Category", new { SeName = itemOne.SeName })">@itemOne.Name</a></span>
-              </div>
-              <ul>
-                  @{
-                    var cc = 0;
-                  }
-                  @foreach (var item in itemOne.SubCategories)
-                  {
-                      cc++;
-                      @*if (cc % 2 != 0)
-                      {
-                          
-                      }*@
-                      <li>
-                          <span><a href="@Url.RouteUrl("Category", new { SeName = item.SeName })">@item.Name</a></span>
-                      </li>
-                  }
-              </ul>
-          </div>
-            <div class="col-md-10" style="background-color:red">.col-md-10</div>
-        </div>
-    }
-    /*
-    var cat_i = 0;
-    foreach (var itemOne in Model)
-    {
-        <div class="row">
-            <!--recommended_items-->
+        var cat_i = 0;
+        foreach (var itemOne in Model)
+        {
 
-            <div class=".col-lg-6 .col-md-6" style="background-color:yellow;">
-                <div>
-                    <span><a href="@Url.RouteUrl("Category", new { SeName = itemOne.SeName })">@itemOne.Name</a></span>
-                </div>
-                <div class="">
-                    @foreach (var item in itemOne.SubCategories)
-                    {
-                        <div class=".col-md-6">
-                            <span><a href="@Url.RouteUrl("Category", new { SeName = item.SeName })">@item.Name</a></span>
+            <div class="row floor-show" style="margin-bottom:20px;">
+                <div class="col-md-2">
+                    <div class="floor-show-left">
+                        <div class="floor-show-left-head">
+                            <h4 class="title-box"><a href="@Url.RouteUrl("Category", new { SeName = itemOne.SeName })">@itemOne.Name</a></h4>
                         </div>
-                    }
+                        <div class="floor-show-left-bottom">
+                            <ul class="list-inline floor-label-list">
+
+                                @for (int i = 0; i < itemOne.SubCategories.Count; i++)
+                            {
+                                var item = itemOne.SubCategories[i];
+                                if (i % 2 == 0)
+                                {
+                                    @Html.Raw("<li>")
+                                    <a href="@Url.RouteUrl("Category", new { SeName = item.SeName })">@item.Name</a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.RouteUrl("Category", new { SeName = item.SeName })">@item.Name</a>
+                                    @Html.Raw("</li>")
+                                }
+                            }
+
+                                @*@foreach (var item in itemOne.SubCategories)
+                    {
+                        cc++;
+                        if (cc % 2 != 0)
+                        {
+
+                        }
+
+                        <li>
+                            <span><a href="@Url.RouteUrl("Category", new { SeName = item.SeName })">@item.Name</a></span>
+                        </li>
+                    }*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10" style="background-color:red">
+                    <div style="border:1px solid #e5e5e5">
+                        <div class="col-lg-4">
+                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
+
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
+
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
+
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="http://localhost:15536/content/images/thumbs/0000015_25-virtual-gift-card_125.jpeg" />
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class=".col-lg-6 .col-md-6" style="background-color:red;">
-                <a>11231</a>
-            </div>
-
-            
-        </div>
+        }
     }
-     */
-
-
-
-
 
 }
-
-
 
 
 

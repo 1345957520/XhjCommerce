@@ -749,6 +749,12 @@ namespace Chj.Web.Controllers
         #endregion
 
         #region MyRegion
+
+        public ActionResult HomepageCategoriesListRight()
+        {
+            return PartialView();
+        }
+
         [ChildActionOnly]
         public ActionResult HomepageCategoriesList()
         {

@@ -5,39 +5,60 @@
             <div class="col-sm-6">
                 <div class="contactinfo">
                     <ul class="nav nav-pills">
-                        <li class="first-child"><a href="#"><i class="fa fa-phone"></i>13880535849</a></li>
-                        <li><a id="artopheadcollect" href="javascript:void(0);"><img src="/Themes/ChjShop/Content/css/images/collect.png" /> 收藏餐具购</a></li>
+                        <li class="first-child"><a href="#"><i class="fa fa-phone"></i> 13880535849</a></li>
+                        <li><a id="artopheadcollect" href="javascript:void(0);"><img src="/Themes/ChjShop/Content/css/images/collect.png" /> 收藏我</a></li>
                         <li class="dropdown">
-                            <a id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/Themes/ChjShop/Content/css/images/QRcode.png" /> 关注餐具购</a>
+                            <a id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/Themes/ChjShop/Content/css/images/QRcode.png" /> 关注我</a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                                 <li role="presentation"><img width="180px" height="180px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" /></li>
                             </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-mobile fa-lg"></i> 手机版</a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                <li role="presentation">
+                                    <div style="width:200px;height:100px;">
+                                        <div>
+
+                                        </div>
+                                        <div>
+                                            <img class="pull-left" width="80px" height="80px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" />
+                                            <div>
+                                                <a style="margin-bottom:10px;" href="#"><img width="100px" src="/Themes/ChjShop/Content/css/images/applestore.png" /></a>
+                                                <a href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/android.png" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="contactinfo">
-                    <ul class="nav nav-pills  pull-right">
+                    @Html.Action("HeaderLinks", "Common")
+                   @* <ul class="nav nav-pills  pull-right">
                         <li><a href="/customer/info">我的餐具购</a></li>
                         <li class="dropdown">
                             <a href="#" id="dropdownMenu2" class="dropdown-toggle" data-toggle="dropdown"> 手机版</a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                                    <li role="presentation">
-                                        <div style="width:200px;height:100px;">
-                                            <div>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                                <li role="presentation">
+                                    <div style="width:200px;height:100px;">
+                                        <div>
                                                 
-                                            </div>
+                                        </div>
+                                        <div>
+                                            <img class="pull-left" width="80px" height="80px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" />
                                             <div>
-                                                <img class="pull-left" width="80px" height="80px" src="/Themes/ChjShop/Content/css/images/bigqrcode.png" />
-                                                <div>
-                                                    <a style="margin-bottom:10px;" href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/applestore.png" /></a>
-                                                    <a href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/android.png" /></a>
-                                                </div>
+                                                <a style="margin-bottom:10px;" href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/applestore.png" /></a>
+                                                <a href="www.apple.com"><img width="100px" src="/Themes/ChjShop/Content/css/images/android.png" /></a>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </li>
+                            </ul>
                             
                         </li>
                         <li>
@@ -55,8 +76,9 @@
                             </div>
                         </li>
                         <li><a href="#"> 分享有礼</a></li>
-                    </ul>
+                    </ul>*@
                 </div>
+              
                 <div class="social-icons pull-right">
                     @*<span>分享有礼</span>*@
                     @*<ul class="nav navbar-nav">

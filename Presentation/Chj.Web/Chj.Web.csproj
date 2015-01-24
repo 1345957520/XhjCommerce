@@ -1605,6 +1605,9 @@
     <Content Include="Themes\ChjShop\Content\css\images\home\sale.png" />
     <Content Include="Themes\ChjShop\Content\css\images\home\searchicon.png" />
     <Content Include="Themes\ChjShop\Content\css\images\home\shipping.jpg" />
+    <Content Include="Themes\ChjShop\Content\css\images\home\开业大吉.jpg" />
+    <Content Include="Themes\ChjShop\Content\css\images\home\新春.jpg" />
+    <Content Include="Themes\ChjShop\Content\css\images\home\跨年.jpg" />
     <Content Include="Themes\ChjShop\Content\css\images\ico-arrow-r.gif" />
     <Content Include="Themes\ChjShop\Content\css\images\ico-close-notification-bar.png" />
     <Content Include="Themes\ChjShop\Content\css\images\ico-delete.gif" />

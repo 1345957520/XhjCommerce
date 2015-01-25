@@ -1,5 +1,5 @@
 /*
-** nopCommerce custom accordion
+** jucango custom accordion
 */
 
 var Accordion = {

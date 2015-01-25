@@ -9,7 +9,7 @@ namespace Chj.Web.Framework.Localization
         private static int _seoCodeLength = 2;
         
         /// <summary>
-        /// Returns a value indicating whether nopCommerce is run in virtual directory
+        /// Returns a value indicating whether jucango is run in virtual directory
         /// </summary>
         /// <param name="applicationPath">Application path</param>
         /// <returns>Result</returns>

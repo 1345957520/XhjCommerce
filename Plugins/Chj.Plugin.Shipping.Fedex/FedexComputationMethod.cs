@@ -86,7 +86,7 @@ namespace Chj.Plugin.Shipping.Fedex
             request.ClientDetail.MeterNumber = _fedexSettings.MeterNumber;
 
             request.TransactionDetail = new RateServiceWebReference.TransactionDetail();
-            request.TransactionDetail.CustomerTransactionId = "***Rate Available Services v7 Request - nopCommerce***"; // This is a reference field for the customer.  Any value can be used and will be provided in the response.
+            request.TransactionDetail.CustomerTransactionId = "***Rate Available Services v7 Request - jucango***"; // This is a reference field for the customer.  Any value can be used and will be provided in the response.
 
             request.Version = new RateServiceWebReference.VersionId(); // WSDL version information, value is automatically set from wsdl            
 
@@ -176,8 +176,7 @@ namespace Chj.Plugin.Shipping.Fedex
 
             //Saturday pickup is available for certain FedEx Express U.S. service types:
             //http://www.fedex.com/us/developer/product/WebServices/MyWebHelp/Services/Options/c_SaturdayShipAndDeliveryServiceDetails.html
-            //If the customer orders on a Saturday, the rate calculation will use Saturday as the shipping date, and the rates will include a Saturday pickup surcharge
-            //More info: http://www.nopcommerce.com/boards/t/27348/fedex-rate-can-be-excessive-for-express-methods-if-calculated-on-a-saturday.aspx
+            //If the customer orders on a Saturday, the rate calculation will use Saturday as the shipping date, and the rates will include a Saturday pickup surcharge 
             var shipTimestamp = DateTime.Now;
             if (shipTimestamp.DayOfWeek == DayOfWeek.Saturday)
                 shipTimestamp = shipTimestamp.AddDays(2);
@@ -701,7 +700,7 @@ namespace Chj.Plugin.Shipping.Fedex
 
             //The solution coded here might be considered a bit of a hack
             //it only supports the scenario for US / Canada shipping
-            //because nopCommerce does not have a concept of a designated currency for a Country.
+            //because jucango does not have a concept of a designated currency for a Country.
             string originCurrencyCode;
             if (originCountryCode == "US")
                 originCurrencyCode = "USD";

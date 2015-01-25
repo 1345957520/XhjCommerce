@@ -278,8 +278,7 @@ namespace Chj.Core.Plugins
                 result.Add(new KeyValuePair<FileInfo, PluginDescriptor>(descriptionFile, pluginDescriptor));
             }
 
-            //sort list by display order. NOTE: Lowest DisplayOrder will be first i.e 0 , 1, 1, 1, 5, 10
-            //it's required: http://www.nopcommerce.com/boards/t/17455/load-plugins-based-on-their-displayorder-on-startup.aspx
+            
             result.Sort((firstPair, nextPair) => firstPair.Value.DisplayOrder.CompareTo(nextPair.Value.DisplayOrder));
             return result;
         }
@@ -329,7 +328,7 @@ namespace Chj.Core.Plugins
         {
             if (plug.Directory.Parent == null)
                 throw new InvalidOperationException("The plugin directory for the " + plug.Name +
-                                                    " file exists in a folder outside of the allowed nopCommerce folder heirarchy");
+                                                    " file exists in a folder outside of the allowed jucango folder heirarchy");
 
             FileInfo shadowCopiedPlug;
 
@@ -419,8 +418,7 @@ namespace Chj.Core.Plugins
                 else
                 {
                     //delete an existing file
-
-                    //More info: http://www.nopcommerce.com/boards/t/11511/access-error-nopplugindiscountrulesbillingcountrydll.aspx?p=4#60838
+                     
                     Debug.WriteLine("New plugin found; Deleting the old file: '{0}'", shadowCopiedPlug.Name);
                     File.Delete(shadowCopiedPlug.FullName);
                 }

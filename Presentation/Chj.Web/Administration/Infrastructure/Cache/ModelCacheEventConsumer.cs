@@ -14,7 +14,7 @@ namespace Chj.Admin.Infrastructure.Cache
         IConsumer<EntityUpdated<Setting>>
     {
         /// <summary>
-        /// Key for nopCommerce.com news cache
+        /// Key for jucango.com news cache
         /// </summary>
         public const string OFFICIAL_NEWS_MODEL_KEY = "Chj.pres.admin.official.news";
         public const string OFFICIAL_NEWS_PATTERN_KEY = "Chj.pres.admin.official.news";

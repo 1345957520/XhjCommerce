@@ -7,7 +7,7 @@ using System.Xml;
 namespace Chj.Core.Plugins
 {
     /// <summary>
-    /// Official feed manager (official plugins from www.nopCommerce.com site)
+    /// Official feed manager (official plugins from www.jucango.com site)
     /// </summary>
     public partial class OfficialFeedManager : IOfficialFeedManager
     {

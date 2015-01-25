@@ -3,6 +3,6 @@ FriendlyName: Fixed Rate Shipping
 SystemName: Shipping.FixedRate
 Version: 1.16
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Shipping.FixedRateShipping.dll

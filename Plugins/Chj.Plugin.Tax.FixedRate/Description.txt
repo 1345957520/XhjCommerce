@@ -3,6 +3,6 @@ FriendlyName: Fixed tax rate provider
 SystemName: Tax.FixedRate
 Version: 1.12
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Tax.FixedRate.dll

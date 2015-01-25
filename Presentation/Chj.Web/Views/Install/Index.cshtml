@@ -5,7 +5,7 @@
 @{
     Layout = null;
     //localization service for installation service
-    //we do not use standard nopCommerce localization because database is not installed yet
+    //we do not use standard jucango localization because database is not installed yet
     //locale resources for installation process are stored into \App_Data\Localization\Installation directory
     var ILS = EngineContext.Current.Resolve<IInstallationLocalizationService>();
 }
@@ -320,7 +320,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2">
-                                                    @ILS.GetResource("Documentation1") <a href="http://docs.nopcommerce.com/display/nc/nopCommerce+Documentation?utm_source=installation-page&utm_medium=footer&utm_campaign=installation-page" target="_blank">@ILS.GetResource("Documentation2")</a>.
+                                                    @ILS.GetResource("Documentation1") <a href="#" target="_blank">@ILS.GetResource("Documentation2")</a>.
                                                 </td>
                                             </tr>
                                             <tr>

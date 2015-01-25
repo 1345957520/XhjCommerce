@@ -92,7 +92,7 @@ namespace Chj.Web.Framework.Menu
                 siteMapNode.ControllerName = controllerName;
                 siteMapNode.ActionName = actionName;
 
-                //apply admin area as described here - http://www.nopcommerce.com/boards/t/20478/broken-menus-in-admin-area-whilst-trying-to-make-a-plugin-admin-page.aspx
+                //apply admin area as described here -  
                 siteMapNode.RouteValues = new RouteValueDictionary { {"area", "Admin"} };
             }
             else if (!string.IsNullOrEmpty(url))

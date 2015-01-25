@@ -3,6 +3,6 @@ FriendlyName: Purchase Order
 SystemName: Payments.PurchaseOrder
 Version: 1.15
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Payments.PurchaseOrder.dll

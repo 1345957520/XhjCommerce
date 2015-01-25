@@ -3,6 +3,6 @@ FriendlyName: Australia Post
 SystemName: Shipping.AustraliaPost
 Version: 1.13
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Shipping.AustraliaPost.dll

@@ -3,6 +3,6 @@ FriendlyName: USPS (US Postal Service)
 SystemName: Shipping.USPS
 Version: 1.25
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Shipping.USPS.dll

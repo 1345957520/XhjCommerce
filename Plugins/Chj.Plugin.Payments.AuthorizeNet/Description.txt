@@ -3,6 +3,6 @@ FriendlyName: Credit Card
 SystemName: Payments.AuthorizeNet
 Version: 1.24
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Payments.AuthorizeNet.dll

@@ -3,6 +3,6 @@ FriendlyName: Customer had spent x.xx amount
 SystemName: DiscountRequirement.HadSpentAmount
 Version: 1.11
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.DiscountRules.HadSpentAmount.dll

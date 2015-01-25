@@ -3,6 +3,6 @@ FriendlyName: Customer has all of these products in the cart
 SystemName: DiscountRequirement.HasAllProducts
 Version: 1.15
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.DiscountRules.HasAllProducts.dll

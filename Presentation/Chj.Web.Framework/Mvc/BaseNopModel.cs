@@ -4,7 +4,7 @@ using System.Web.Mvc;
 namespace Chj.Web.Framework.Mvc
 {
     /// <summary>
-    /// Base nopCommerce model
+    /// Base jucango model
     /// </summary>
     [ModelBinder(typeof(NopModelBinder))]
     public partial class BaseNopModel
@@ -35,7 +35,7 @@ namespace Chj.Web.Framework.Mvc
     }
 
     /// <summary>
-    /// Base nopCommerce entity model
+    /// Base jucango entity model
     /// </summary>
     public partial class BaseNopEntityModel : BaseNopModel
     {

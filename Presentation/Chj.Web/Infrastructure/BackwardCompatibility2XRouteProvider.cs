@@ -7,7 +7,7 @@ using Chj.Web.Framework.Mvc.Routes;
 
 namespace Chj.Web.Infrastructure
 {
-    //Routes used for backward compatibility with 2.x versions of nopCommerce
+    //Routes used for backward compatibility with 2.x versions of jucango
     public partial class BackwardCompatibility2XRouteProvider : IRouteProvider
     {
         public void RegisterRoutes(RouteCollection routes)

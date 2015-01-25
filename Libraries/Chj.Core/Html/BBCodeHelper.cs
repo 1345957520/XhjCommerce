@@ -59,12 +59,12 @@ namespace Chj.Core.Html
 
             if (replaceUrl)
             {
-                // format the url tags: [url=http://www.nopCommerce.com]my site[/url]
-                // becomes: <a href="http://www.nopCommerce.com">my site</a>
+                // format the url tags: [url=http://www.jucango.com]my site[/url]
+                // becomes: <a href="http://www.jucango.com">my site</a>
                 text = regexUrl1.Replace(text, "<a href=\"$1\" rel=\"nofollow\">$2</a>");
 
-                // format the url tags: [url]http://www.nopCommerce.com[/url]
-                // becomes: <a href="http://www.nopCommerce.com">http://www.nopCommerce.com</a>
+                // format the url tags: [url]http://www.jucango.com[/url]
+                // becomes: <a href="http://www.jucango.com">http://www.jucango.com</a>
                 text = regexUrl2.Replace(text, "<a href=\"$1\" rel=\"nofollow\">$1</a>");
             }
 

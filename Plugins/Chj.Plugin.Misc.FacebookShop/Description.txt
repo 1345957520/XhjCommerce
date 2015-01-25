@@ -3,6 +3,6 @@ FriendlyName: Facebook shop
 SystemName: Misc.FacebookShop
 Version: 1.09
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Misc.FacebookShop.dll

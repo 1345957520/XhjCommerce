@@ -64,7 +64,7 @@ namespace Chj.Core.Plugins
         public virtual string Version { get; set; }
 
         /// <summary>
-        /// Gets or sets the supported versions of nopCommerce
+        /// Gets or sets the supported versions of jucango
         /// </summary>
         public virtual IList<string> SupportedVersions { get; set; }
 

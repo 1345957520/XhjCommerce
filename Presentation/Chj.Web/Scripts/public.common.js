@@ -1,5 +1,5 @@
 ﻿/*
-** nopCommerce custom js functions
+** jucango custom js functions
 */
 
 

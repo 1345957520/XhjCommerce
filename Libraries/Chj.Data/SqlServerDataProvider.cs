@@ -94,7 +94,7 @@ namespace Chj.Data
         /// </summary>
         public virtual void SetDatabaseInitializer()
         {
-            //pass some table names to ensure that we have nopCommerce 2.X installed
+            //pass some table names to ensure that we have jucango 2.X installed
             var tablesToValidate = new[] { "Customer", "Discount", "Order", "Product", "ShoppingCartItem" };
 
             //custom commands (stored proedures, indexes)

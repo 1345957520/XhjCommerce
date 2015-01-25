@@ -4368,7 +4368,7 @@ namespace Chj.Services.Installation
                                            IncludeInSitemap = false,
                                            IsPasswordProtected = false,
                                            Title = "Welcome to our store",
-                                           Body = "<p>Online shopping is the process consumers go through to purchase products or services over the Internet. You can edit this in the admin site.</p><p>If you have questions, see the <a href=\"http://www.nopcommerce.com/documentation.aspx\">Documentation</a>, or post in the <a href=\"http://www.nopcommerce.com/boards/\">Forums</a> at <a href=\"http://www.nopcommerce.com\">nopCommerce.com</a></p>"
+                                           Body = "<p>Online shopping is the process consumers go through to purchase products or services over the Internet. "
                                        },
                                    new Topic
                                        {
@@ -4675,10 +4675,10 @@ namespace Chj.Services.Installation
                     ResponsiveDesignSupported = true,
                     DisplayMiniProfilerInPublicStore = false,
                     DisplayEuCookieLawWarning = false,
-                    FacebookLink = "http://www.facebook.com/nopCommerce",
-                    TwitterLink = "https://twitter.com/nopCommerce",
-                    YoutubeLink = "http://www.youtube.com/user/nopCommerce",
-                    GooglePlusLink = "https://plus.google.com/+nopcommerce",
+                    FacebookLink = "http://www.facebook.com/jucango",
+                    TwitterLink = "https://twitter.com/jucango",
+                    YoutubeLink = "http://www.youtube.com/user/jucango",
+                    GooglePlusLink = "https://plus.google.com/+jucango",
                 });
 
             settingService.SaveSetting(new ExternalAuthenticationSettings
@@ -9279,7 +9279,7 @@ namespace Chj.Services.Installation
                                              Language = defaultLanguage,
                                              Title = "Customer Service - Client Service",
                                              Body = "<p>Managing online business requires different skills and abilities than managing a business in the &lsquo;real world.&rsquo; Customers can easily detect the size and determine the prestige of a business when they have the ability to walk in and take a look around. Not only do &lsquo;real-world&rsquo; furnishings and location tell the customer what level of professionalism to expect, but &quot;real world&quot; personal encounters allow first impressions to be determined by how the business approaches its customer service. When a customer walks into a retail business just about anywhere in the world, that customer expects prompt and personal service, especially with regards to questions that they may have about products they wish to purchase.<br /><br />Customer service or the client service is the service provided to the customer for his satisfaction during and after the purchase. It is necessary to every business organization to understand the customer needs for value added service. So customer data collection is essential. For this, a good customer service is important. The easiest way to lose a client is because of the poor customer service. The importance of customer service changes by product, industry and customer. Client service is an important part of every business organization. Each organization is different in its attitude towards customer service. Customer service requires a superior quality service through a careful design and execution of a series of activities which include people, technology and processes. Good customer service starts with the design and communication between the company and the staff.<br /><br />In some ways, the lack of a physical business location allows the online business some leeway that their &lsquo;real world&rsquo; counterparts do not enjoy. Location is not important, furnishings are not an issue, and most of the visual first impression is made through the professional design of the business website.<br /><br />However, one thing still remains true. Customers will make their first impressions on the customer service they encounter. Unfortunately, in online business there is no opportunity for front- line staff to make a good impression. Every interaction the customer has with the website will be their primary means of making their first impression towards the business and its client service. Good customer service in any online business is a direct result of good website design and planning.</p><p>By Jayashree Pakhare (buzzle.com)</p>",
-                                             Tags = "e-commerce, nopCommerce, sample tag, money",
+                                             Tags = "e-commerce, jucango, sample tag, money",
                                              CreatedOnUtc = DateTime.UtcNow.AddSeconds(1),
                                         },
                                 };
@@ -9308,9 +9308,9 @@ namespace Chj.Services.Installation
                                         {
                                              AllowComments = true,
                                              Language = defaultLanguage,
-                                             Title = "nopCommerce new release!",
-                                             Short = "nopCommerce includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included!<br /><br />nopCommerce is a fully customizable shopping cart. It's stable and highly usable. From downloads to documentation, www.nopCommerce.com offers a comprehensive base of information, resources, and support to the nopCommerce community.",
-                                             Full = "<p>nopCommerce includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included!</p><p>For full feature list go to <a href=\"http://www.nopCommerce.com\">nopCommerce.com</a></p><p>Providing outstanding custom search engine optimization, web development services and e-commerce development solutions to our clients at a fair price in a professional manner.</p>",
+                                             Title = "jucango new release!",
+                                             Short = "jucango includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included!<br /><br />jucango is a fully customizable shopping cart. It's stable and highly usable. From downloads to documentation, www.jucango.com offers a comprehensive base of information, resources, and support to the jucango community.",
+                                             Full = "<p>jucango includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included!</p><p>For full feature list go to <a href=\"http://www.jucango.com\">jucango.com</a></p><p>Providing outstanding custom search engine optimization, web development services and e-commerce development solutions to our clients at a fair price in a professional manner.</p>",
                                              Published  = true,
                                              CreatedOnUtc = DateTime.UtcNow,
                                         },
@@ -9319,7 +9319,7 @@ namespace Chj.Services.Installation
                                              AllowComments = true,
                                              Language = defaultLanguage,
                                              Title = "New online store is open!",
-                                             Short = "The new nopCommerce store is open now! We are very excited to offer our new range of products. We will be constantly adding to our range so please register on our site, this will enable you to keep up to date with any new products.",
+                                             Short = "The new jucango store is open now! We are very excited to offer our new range of products. We will be constantly adding to our range so please register on our site, this will enable you to keep up to date with any new products.",
                                              Full = "<p>Our online store is officially up and running. Stock up for the holiday season! We have a great selection of items. We will be constantly adding to our range so please register on our site, this will enable you to keep up to date with any new products.</p><p>All shipping is worldwide and will leave the same day an order is placed! Happy Shopping and spread the word!!</p>",
                                              Published  = true,
                                              CreatedOnUtc = DateTime.UtcNow.AddSeconds(1),
@@ -9347,7 +9347,7 @@ namespace Chj.Services.Installation
             var poll1 = new Poll
             {
                 Language = defaultLanguage,
-                Name = "Do you like nopCommerce?",
+                Name = "Do you like jucango?",
                 SystemKeyword = "RightColumnPoll",
                 Published = true,
                 DisplayOrder = 1,

@@ -1,5 +1,5 @@
 /*
-** nopCommerce one page checkout
+** jucango one page checkout
 */
 
 

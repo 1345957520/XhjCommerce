@@ -3,6 +3,6 @@ FriendlyName: Google Shopping (formely Google Product Search)
 SystemName: PromotionFeed.Froogle
 Version: 1.66
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Feed.Froogle.dll

@@ -1,5 +1,5 @@
 ﻿/*
-** nopCommerce ajax cart implementation
+** jucango ajax cart implementation
 */
 
 

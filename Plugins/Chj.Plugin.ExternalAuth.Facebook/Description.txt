@@ -3,6 +3,6 @@ FriendlyName: Facebook authentication
 SystemName: ExternalAuth.Facebook
 Version: 1.33
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 5
 FileName: Chj.Plugin.ExternalAuth.Facebook.dll

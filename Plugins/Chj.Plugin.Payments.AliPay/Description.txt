@@ -3,6 +3,6 @@ FriendlyName: AliPay
 SystemName: Payments.AliPay
 Version: 1.03
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Payments.AliPay.dll

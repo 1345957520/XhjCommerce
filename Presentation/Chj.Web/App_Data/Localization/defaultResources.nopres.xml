@@ -3985,7 +3985,7 @@
     <Value>Manual plugin installation</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Plugins.Description.Step1">
-    <Value>Upload the plugin to the /plugins folder in your nopCommerce directory.</Value>
+    <Value>Upload the plugin to the /plugins folder in your jucango directory.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Plugins.Description.Step2">
     <Value>Restart your application (or click 'Reload list of plugins' button).</Value>
@@ -3997,7 +3997,7 @@
     <Value>Click on the 'Install' link to install the plugin.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Plugins.Description.Step5">
-    <Value>Note: If you're running nopCommerce in medium trust, then it's recommended to clear your \Plugins\bin\ directory</Value>
+    <Value>Note: If you're running jucango in medium trust, then it's recommended to clear your \Plugins\bin\ directory</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Plugins.EditDetails">
     <Value>Edit plugin details</Value>
@@ -5128,7 +5128,7 @@
     <Value>You can get more themes on</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.DefaultStoreTheme.Hint">
-    <Value>The public store theme. You can download themes from the extensions page at www.nopcommerce.com.</Value>
+    <Value>The public store theme. </Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.DefaultTitle">
     <Value>Default title</Value>
@@ -5146,13 +5146,13 @@
     <Value>CSS bundling and minification</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.EnableCssBundling.Hint">
-    <Value>Enable to combine (bundle) multiple CSS files into a single file. Don't enable if you're running nopCommerce in web farms or Windows Azure. It also doesn't work in virtual IIS directories. Note that this functionality requires significant server resources (not recommended to use with cheap shared hosting plans).</Value>
+    <Value>Enable to combine (bundle) multiple CSS files into a single file. Don't enable if you're running jucango in web farms or Windows Azure. It also doesn't work in virtual IIS directories. Note that this functionality requires significant server resources (not recommended to use with cheap shared hosting plans).</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.EnableJsBundling">
     <Value>JavaScript bundling and minification</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.EnableJsBundling.Hint">
-    <Value>Enable to combine (bundle) multiple JavaScript files into a single file. Don't enable if you're running nopCommerce in web farms or Windows Azure. Note that this functionality requires significant server resources (not recommended to use with cheap shared hosting plans).</Value>
+    <Value>Enable to combine (bundle) multiple JavaScript files into a single file. Don't enable if you're running jucango in web farms or Windows Azure. Note that this functionality requires significant server resources (not recommended to use with cheap shared hosting plans).</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.EncryptionKey">
     <Value>Encryption private key</Value>
@@ -6295,7 +6295,7 @@
     <Value>Secure URL</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Stores.Fields.SecureUrl.Hint">
-    <Value>The secure URL of your store e.g. https://www.yourstore.com/ or http://sharedssl.yourstore.com/. Leave it empty if you want nopCommerce to detect secure URL automatically.</Value>
+    <Value>The secure URL of your store e.g. https://www.yourstore.com/ or http://sharedssl.yourstore.com/. Leave it empty if you want jucango to detect secure URL automatically.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Stores.Fields.SslEnabled">
     <Value>SSL enabled</Value>
@@ -8086,7 +8086,7 @@
     <Value>Help topics</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.NopCommerceNews">
-    <Value>NopCommerce News</Value>
+    <Value>jucango News</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.NopCommerceNews.HideAdv">
     <Value>Hide advertisements</Value>
@@ -9004,7 +9004,7 @@
     <Value>Shipping not required</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.PageTitle">
-    <Value>nopCommerce administration</Value>
+    <Value>jucango administration</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Picture.RemovePicture">
     <Value>Remove picture</Value>
@@ -10114,10 +10114,10 @@
     <Value>A list of loaded assemblies</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.System.SystemInfo.NopVersion">
-    <Value>nopCommerce version</Value>
+    <Value>jucango version</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.System.SystemInfo.NopVersion.Hint">
-    <Value>nopCommerce version</Value>
+    <Value>jucango version</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.System.SystemInfo.OperatingSystem">
     <Value>Operating system</Value>
@@ -10249,7 +10249,7 @@
     <Value>The '{0}' account is not granted with Modify permission on file '{1}'. Please configure these permissions.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.System.Warnings.IncompatiblePlugin">
-    <Value>'{0}' plugin is incompatible with your nopCommerce version. Delete it or update to the latest version.</Value>
+    <Value>'{0}' plugin is incompatible with your jucango version. Delete it or update to the latest version.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.System.Warnings.MachineKey.NotSpecified">
     <Value>A custom machine key is not specified (web.config file)</Value>

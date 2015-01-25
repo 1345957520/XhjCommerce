@@ -3,6 +3,6 @@ FriendlyName: FedEx
 SystemName: Shipping.FedEx
 Version: 1.18
 SupportedVersions: 3.50
-Author: nopCommerce team
+Author: jucango team
 DisplayOrder: 1
 FileName: Chj.Plugin.Shipping.Fedex.dll

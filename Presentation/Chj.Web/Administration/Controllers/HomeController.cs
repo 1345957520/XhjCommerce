@@ -54,7 +54,7 @@ namespace Chj.Admin.Controllers
         {
             try
             {
-                string feedUrl = string.Format("http://www.nopCommerce.com/NewsRSS.aspx?Version={0}&Localhost={1}&HideAdvertisements={2}&StoreURL={3}",
+                string feedUrl = string.Format("http://www.jucango.com/NewsRSS.aspx?Version={0}&Localhost={1}&HideAdvertisements={2}&StoreURL={3}",
                     NopVersion.CurrentVersion, 
                     Request.Url.IsLoopback, 
                     _commonSettings.HideAdvertisementsOnAdminArea,

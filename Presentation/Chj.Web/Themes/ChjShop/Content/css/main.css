@@ -31,8 +31,9 @@ a#scrollUp { bottom: 0px; right: 10px; padding: 5px 10px; color: #FFF; -webkit-a
 /*************************
 *******Header CSS******
 **************************/
-
 .header_top { background: none repeat scroll 0 0 #F5F5F5; }
+/*固定搜索框不成功
+.header_top { background: none repeat scroll 0 0 #F5F5F5; position: fixed;top: 0;z-index: 10000;width: 100%;}*/
 
 .contactinfo ul .first-child { margin-left: -15px; }
 
@@ -63,8 +64,16 @@ a#scrollUp { bottom: 0px; right: 10px; padding: 5px 10px; color: #FFF; -webkit-a
 .fa-dribbble:hover { background: #90C9DC; }
 
 .fa-google-plus:hover { background: #CE3C2D; }
+/*固定搜索框不成功
+.header-middle{z-index: 1001;
+position: fixed;
+top: 35px;
+    width: 100%;border-bottom: 1px solid #e8e8e8;background: #fff;overflow: visible;box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+}*/
 
-.header-middle .container .row { border-bottom: 1px solid #f5f5f5; margin-left: 0; margin-right: 0; padding-bottom: 20px; padding-top: 20px; }
+/*.header-middle .container .row { border-bottom: 1px solid #f5f5f5; margin-left: 0; margin-right: 0; padding-bottom: 20px; padding-top: 20px; }*/
+.header-middle .container .row { border-bottom: 1px solid #f5f5f5; margin-left: 0; margin-right: 0; }
+
 
     .header-middle .container .row .col-sm-4 { padding-left: 0; }
 
@@ -95,7 +104,8 @@ a#scrollUp { bottom: 0px; right: 10px; padding: 5px 10px; color: #FFF; -webkit-a
         .shop-menu ul li a:hover { background: #fff; }
 
 
-.header-bottom { padding-bottom: 30px; padding-top: 30px; }
+/*.header-bottom { padding-bottom: 30px; padding-top: 30px; }*/
+.header-bottom { padding-bottom: 20px; padding-top: 20px; }
 
 .navbar-collapse.collapse { padding-left: 0; }
 
@@ -117,8 +127,8 @@ a#scrollUp { bottom: 0px; right: 10px; padding: 5px 10px; color: #FFF; -webkit-a
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active, .shop-menu ul li a.active { background: none; background-color: transparent; }
 
-.search_box input { background: #F0F0E9; border: medium none; color: #B2B2B2; font-family: 'roboto'; font-size: 12px; font-weight: 300; height: 35px; outline: medium none; padding-left: 10px; width: 155px; background-image: url(../css/images/home/searchicon.png); background-repeat: no-repeat; background-position: 130px; }
-
+/*.search_box input { background: #F0F0E9; border: medium none; color: #B2B2B2; font-family: 'roboto'; font-size: 12px; font-weight: 300; height: 35px; outline: medium none; padding-left: 10px; width: 155px; background-image: url(../css/images/home/searchicon.png); background-repeat: no-repeat; background-position: 130px; }*/
+.search_box input {  color: #B2B2B2; font-family: 'roboto'; font-weight: 300;  padding-left: 10px;  border-radius: 4px!important;   }
 
 /*  Dropdown menu*/
 
@@ -289,7 +299,7 @@ ul.sub-menu { position: absolute; top: 30px; left: 0; background: rgba(0, 0, 0, 
     overflow:hidden;
 }
 
-#slider { padding-bottom: 45px; }
+#slider { padding-bottom: 45px;}
 
 .carousel-indicators li { background: #C4C4BE; }
 
@@ -1002,7 +1012,8 @@ select { color: #696763; border-radius: 0; resize: none; background: #F0F0E9; bo
 /*------------------------------------*\
   General view START
 \*------------------------------------*/
-a.logo { display: block; height: 39px; text-decoration: none; width: 139px; }
+/*a.logo { display: block; height: 39px; text-decoration: none; width: 139px; }*/
+a.logo { display: block; height: 79px; text-decoration: none; width: 189px; }
 
 a { color: #696763; }
 
@@ -1689,4 +1700,26 @@ font-weight: 300;}
 
 .pull-text-right {
     text-align: right;
+}
+
+/*------------------------------------*\
+   自定义CSS样式
+\*------------------------------------*/
+#HomeSearchBox {
+    padding-top: 25px;
+}
+#header {
+    margin-bottom: 30px;
+}
+/*始终让搜索框出现*/
+.HomeSearchBoxShow {
+    top: 0;
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    opacity: 1;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
 }

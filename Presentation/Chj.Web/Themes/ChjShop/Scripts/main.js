@@ -27,4 +27,40 @@ $(document).ready(function(){
 	        zIndex: 2147483647 // Z-Index for the overlay
 		});
 	});
-});
+
+    /*滚动时搜索框自动出现*/
+	$(window).scroll((function () {
+	    var bn = $("#headerMiddle"),
+        bl = $(window);
+	    var bm = 40;
+	    var bq;
+	    var bp = bn.offset().top;
+	    var bo = function () {
+	        if (bq) {
+	            clearTimeout(bq);
+	            bq = false;
+	        }
+	        bq = setTimeout(function() {
+	                var br = bl.scrollTop();
+	                if (br > bm + bp) {
+	                    bq = setTimeout(function() {
+	                            bn.addClass("HomeSearchBoxShow");
+	                        },
+	                        0);
+	                } else {
+	                    if (br <= bm + bp) {
+	                        bq = setTimeout(function() {
+	                                bn.removeClass("HomeSearchBoxShow");
+	                            },
+	                            0);
+	                    }
+	                }
+	            },
+	            50);
+	    };
+	    bo();
+	    return bo;
+	})());
+}); 
+
+
